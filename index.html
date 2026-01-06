@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Consultency - Get Personal Loan ₹10,000 – ₹10,00,000 in Just 5 Minutes</title>
+    <meta name="description"
+        content="Get instant personal loan approval in 5 minutes. 100% online process with no office visit. Loan amount from ₹10,000 to ₹10,00,000. Safe and secure.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="loader-logo">
+                <div class="logo-circle">
+                    <svg class="logo-svg" viewBox="0 0 100 100">
+                        <circle class="logo-circle-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="logo-circle-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="logo-text">KC</div>
+                </div>
+            </div>
+            <h2 class="loader-title">Krish Consultency</h2>
+            <p class="loader-subtitle">Loading your loan solutions...</p>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Apply Button (Mobile) -->
+    <div class="sticky-apply" id="stickyApply">
+        <button class="sticky-btn" onclick="scrollToForm()">
+            🚀 Apply Now
+        </button>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917623036044" class="whatsapp-float" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path
+                d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.02 7.78L0 32l8.384-2.2A15.917 15.917 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.2c-2.548 0-5.02-.732-7.14-2.116l-.512-.304-5.308 1.392 1.416-5.172-.336-.532A13.155 13.155 0 012.8 16C2.8 8.712 8.712 2.8 16 2.8S29.2 8.712 29.2 16 23.288 29.2 16 29.2z" />
+            <path
+                d="M23.12 19.44c-.388-.196-2.296-1.132-2.652-1.26-.356-.132-.616-.196-.876.196-.26.388-1.008 1.26-1.236 1.52-.228.26-.456.292-.844.096-.388-.196-1.64-.604-3.124-1.928-1.156-1.032-1.936-2.308-2.164-2.696-.228-.388-.024-.6.172-.792.176-.176.388-.456.584-.684.196-.228.26-.388.388-.648.132-.26.068-.488-.032-.684-.1-.196-.876-2.108-1.2-2.888-.316-.76-.636-.656-.876-.668-.228-.012-.488-.016-.748-.016s-.684.096-1.04.488c-.356.388-1.36 1.328-1.36 3.24s1.392 3.76 1.588 4.02c.196.26 2.748 4.196 6.656 5.884.932.404 1.66.644 2.228.824.936.296 1.788.256 2.46.156.752-.112 2.296-.94 2.62-1.848.324-.908.324-1.688.228-1.848-.096-.164-.356-.26-.744-.456z" />
+        </svg>
+    </a>
+
+    <!-- Hero Section with Form -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge-group">
+                        <span class="trust-badge">⚡ Instant Approval</span>
+                        <span class="trust-badge">🔒 100% Secure</span>
+                    </div>
+                    <h1 class="hero-title">
+                        💰 Get Personal Loan<br>
+                        <span class="gradient-text">₹10,000 – ₹10,00,000</span><br>
+                        in Just 5 Minutes
+                    </h1>
+                    <p class="hero-subtitle">
+                        Instant Approval | Safe & Secure
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Quick Approval</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Minimal Documents</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Multiple Banks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Form -->
+                <div class="form-card" id="loanForm">
+                    <div class="form-header">
+                        <h2>Apply for Loan Now</h2>
+                        <p>Fill the form & get instant approval</p>
+                    </div>
+                    <form id="applicationForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number"
+                                pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loanAmount">Loan Amount: <span id="loanAmountValue">₹2,00,000</span></label>
+                            <input type="range" id="loanAmount" name="loanAmount" min="10000" max="1000000"
+                                value="200000" step="10000" oninput="updateLoanAmount(this.value)">
+                            <div class="range-labels">
+                                <span>₹10K</span>
+                                <span>₹10L</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthlyIncome">Monthly Income</label>
+                            <select id="monthlyIncome" name="monthlyIncome" required>
+                                <option value="">Select your monthly income</option>
+                                <option value="15000-25000">₹15,000 - ₹25,000</option>
+                                <option value="25000-50000">₹25,000 - ₹50,000</option>
+                                <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+                                <option value="100000+">₹1,00,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Employment Type</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="employmentType" value="salaried" required>
+                                    <span class="radio-custom">Salaried</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="employmentType" value="self-employed">
+                                    <span class="radio-custom">Self-Employed</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-button">
+                            🚀 Get Loan in 5 Minutes
+                        </button>
+
+                        <p class="trust-line">
+                            🔒 Your data is 100% safe & secure
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-gradient"></div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Krish Consultency</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-large">⚡</div>
+                    <h3>Approval in 5 Minutes</h3>
+                    <p>Get instant loan approval without any delays</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">🏦</div>
+                    <h3>Multiple Bank Options</h3>
+                    <p>Choose from top banks and NBFCs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">📱</div>
+                    <h3>Easy Process</h3>
+                    <p>Simple and hassle-free loan application</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">❌</div>
+                    <h3>No Hidden Charges</h3>
+                    <p>Transparent pricing with no surprises</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">📄</div>
+                    <h3>Minimal Documents</h3>
+                    <p>Just basic KYC documents required</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">🔒</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Your data is encrypted and protected</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Providers Section -->
+    <section class="loan-providers">
+        <div class="container">
+            <h2 class="section-title">We Help You Get Loans From Trusted Banks</h2>
+            <p class="section-subtitle">Partner with India's leading financial institutions</p>
+            <div class="providers-grid">
+                <div class="provider-card">
+                    <div class="provider-logo">HDFC Bank</div>
+                    <p>Personal Loans up to ₹10L</p>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-logo">IDFC First</div>
+                    <p>Quick approval in minutes</p>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-logo">Bajaj Finserv</div>
+                    <p>Flexible repayment options</p>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-logo">Axis Bank</div>
+                    <p>Low interest rates</p>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-logo">ICICI Bank</div>
+                    <p>Instant disbursal</p>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-logo">Credit Card</div>
+                    <p>Card-based loans available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get your loan in 3 simple steps</p>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Fill the Form</h3>
+                    <p>Complete the simple application form with your basic details</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📞</div>
+                    <h3>Get Verification Call</h3>
+                    <p>Our team will verify your details over a quick call</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💸</div>
+                    <h3>Loan Credited</h3>
+                    <p>Money directly transferred to your bank account</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Krish Consultency</h2>
+                <p class="about-text">
+                    Krish Consultency is a trusted personal loan service provider helping people get quick loans with
+                    easy
+                    process and fast approval. We work with multiple banks and NBFCs to provide the best loan options
+                    for our customers. Contact Henmat Bhai for personalized loan assistance with a simple,
+                    transparent, and secure process.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">₹500Cr+</div>
+                        <div class="stat-label">Loans Disbursed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Bank Partners</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8★</div>
+                        <div class="stat-label">Customer Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Support</h2>
+            <p class="section-subtitle">Krish Consultency - Contact: Henmat Bhai</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+917623036044">+91 76230 36044</a>
+                    <p>Mon - Sat: 9 AM - 7 PM</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:henmatbhai@krishanaloan.com">henmatbhai@krishanaloan.com</a>
+                    <p>24/7 Email Support</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Shop - 131, Punjan Plazza, Dumbhal Rd</p>
+                    <p>Salasar Nagar, Dumbhal, Parvat Patiya, Surat, Gujarat 395010</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Krish Consultency</h3>
+                    <p>Contact: Henmat Bhai | Your trusted partner for instant personal loans</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#loanForm">Apply Now</a>
+                    <a href="tel:+917623036044">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Krish Consultency. All rights reserved. | Contact: Henmat Bhai</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">✅</div>
+            <h2>Application Submitted Successfully!</h2>
+            <p>Thank you for applying! Our team will contact you shortly to process your loan application.</p>
+            <button class="cta-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
